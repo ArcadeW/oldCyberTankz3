@@ -1,0 +1,76 @@
+.cyberpunk_btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  color: #0ff;
+  background: #000;
+  border: 2px solid #0ff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+.cyberpunk_btn:before,
+.cyberpunk_btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0ff;
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cyberpunk_btn:hover:before,
+.cyberpunk_btn:hover:after {
+  opacity: 0.1;
+}
+
+.cyberpunk_btn::before {
+  animation: glitch 1s infinite;
+}
+
+.cyberpunk_btn::after {
+  animation: glitch 1s infinite 0.5s;
+}
+
+@keyframes glitch {
+  0% {
+      clip: rect(0, 9999px, 10px, 0);
+  }
+  10% {
+      clip: rect(0, 9999px, 100px, 0);
+  }
+  20% {
+      clip: rect(0, 9999px, 20px, 0);
+  }
+  30% {
+      clip: rect(0, 9999px, 30px, 0);
+  }
+  40% {
+      clip: rect(0, 9999px, 40px, 0);
+  }
+  50% {
+      clip: rect(0, 9999px, 50px, 0);
+  }
+  60% {
+      clip: rect(0, 9999px, 60px, 0);
+  }
+  70% {
+      clip: rect(0, 9999px, 70px, 0);
+  }
+  80% {
+      clip: rect(0, 9999px, 80px, 0);
+  }
+  90% {
+      clip: rect(0, 9999px, 90px, 0);
+  }
+  100% {
+      clip: rect(0, 9999px, 100px, 0);
+  }
+}
