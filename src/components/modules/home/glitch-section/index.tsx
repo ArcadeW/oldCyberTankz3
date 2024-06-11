@@ -28,19 +28,15 @@ export default function GlitchSection({
       <p className={cn("max-w-6xl text-center", inter.className)}>
         {description}
       </p>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 pt-5">
-        <CyberButton
-          title="Download Game"
-          symbol="DWN"
-          className="w-fit h-11"
-        />
-        <CyberButton
-          title="Discord Server"
-          symbol="DSC"
-          className="w-fit h-11"
-          url="https://discord.gg/pkCbWeuybb"
-        />
+      <div className="flex items-center justify-center gap-2 pt-5">
+        <CyberButton title="Download Game" symbol="DWN" className="w-fit h-11" />
         {/* <CyberButton title="Download Game" className="w-fit" /> */}
+      </div>
+      <div className="flex items-center justify-center gap-2 pt-5">
+        <a href="https://discord.gg/pkCbWeuybb" target="_blank" rel="noopener noreferrer">
+          <CyberButton title="Discord Server" symbol="JOIN" className="w-fit h-12" /> 
+          {/* <CyberButton title="Discord Server" className="w-fit" /> */}
+        </a>
       </div>
     </div>
   );
